@@ -1,0 +1,82 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    color: #fff;
+}
+
+section{
+    padding: 2rem;
+}
+
+.sobre_mi{
+    background-color: aqua;
+    color: #333;
+}
+
+.img-yo{
+    border-radius: 50%;
+    border: 5px solid black;
+    box-shadow: 0 0 10px rgba(rgb(255, 255, 255), rgb(255, 255, 255), rgb(218, 102, 7), alpha);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    max-height: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease;
+}
+.img-yo2{
+    border-radius: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    max-width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease;
+
+}
+
+.img-yo2{
+    border-radius: 1.2rem;
+    margin: 1.5rem auto;
+    max-width: 320px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    cursor: pointer;
+}
+
+/* Efecto hover con movimiento y sombra */
+.img-yo2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+}
+
+/* Overlay degradado para desvanecer bordes */
+.img-yo2::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(circle, rgba(255,255,255,0) 70%, rgba(255,255,255,0.9) 100%);
+    pointer-events: none;
+}
+
+/* Sutil borde con efecto glass */
+.img-yo2::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(8px);
+    z-index: 1;
+    pointer-events: none;
+}
+
